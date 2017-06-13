@@ -98,7 +98,7 @@ function setup() {
     coins.addAnimation("idle","assets/coins/coins_01.png","assets/coins/coins_02.png","assets/coins/coins_03.png","assets/coins/coins_04.png");
     collectibles.add(coins);
   }
-  
+
   enemy = createSprite(300,345);
   enemy.addAnimation("walking", "assets/enemy/koopa_standing.png","assets/enemy/koppa_walking.png","assets/enemy/koopa_standing.png");
   enemy.addAnimation("squish", "assets/enemy/squish_koppa02.png","assets/enemy/squish_koopa01.png","assets/enemy/squish_koppa02.png");
@@ -173,7 +173,7 @@ function Sebastian(tempSprite){
     }
     
     //jump controls 
-    if (keyIsDown(UP_ARROW) && this.sprite.position.y <= 348.5){
+    if (keyIsDown(UP_ARROW) && positionOfPlayer(this.sprite)===true){
         this.sprite.velocity.y = -5;
         this.sprite.changeAnimation("jumping");
         jumpSound.play();
@@ -274,6 +274,14 @@ function Score(tempX) {
   stroke(0);
   textFont("Georgia");
   text("Coins: " + score ,tempX-150,19);
+}
+
+function positionOfPlayer(tempPlayer){
+  if(tempPlayer.overlap(groundImg)){
+      return true;
+    } else {
+      return false;
+    }
 }
 
 //remove tokens when ovelapped and plays token sound
