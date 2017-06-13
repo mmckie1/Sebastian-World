@@ -28,6 +28,7 @@ var coinSound;
 var wonSound;
 
 var gravity = 3;
+var jump = -5;
 var GROUND_Y = 350;
 var SCENE_W = 1024;
 var SCENE_H = 400;
@@ -173,8 +174,8 @@ function Sebastian(tempSprite){
     }
     
     //jump controls 
-    if (keyIsDown(UP_ARROW) && positionOfPlayer(this.sprite)===true){
-        this.sprite.velocity.y = -5;
+    if (keyWentDown(UP_ARROW) && curState === true){
+        this.sprite.velocity.y = -50;
         this.sprite.changeAnimation("jumping");
         jumpSound.play();
       } 
@@ -274,14 +275,6 @@ function Score(tempX) {
   stroke(0);
   textFont("Georgia");
   text("Coins: " + score ,tempX-150,19);
-}
-
-function positionOfPlayer(tempPlayer){
-  if(tempPlayer.overlap(groundImg)){
-      return true;
-    } else {
-      return false;
-    }
 }
 
 //remove tokens when ovelapped and plays token sound
