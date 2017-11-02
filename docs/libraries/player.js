@@ -40,6 +40,7 @@ function Sebastian(tempSprite) {
     //jump controls 
     if (keyWentDown(UP_ARROW) && curState === true){
         this.sprite.velocity.y = -50;
+        this.sprite.velocity.x = 10;
         this.sprite.changeAnimation("jumping");
         jumpSound.play();
       } 
@@ -149,15 +150,17 @@ function collect(collector,collected) {
 
 function StepOnEnemy(player, enemy){
   
-  var player_Left = leftSide(player);
-  var player_Right = rightSide(player);
-  var player_Up = upSide(player);
-  var player_Down = downSide(player);
+    var player_Left = leftSide(player);
+    var player_Right = rightSide(player);
+    var player_Up = upSide(player);
+    var player_Down = downSide(player);
   
-  var enemy_Left = leftSide(enemy);
-  var enemy_Right = rightSide(enemy);
-  var enemy_Up = upSide(enemy);
-  var enemy_Down = downSide(enemy);
+    var enemy_Left = leftSide(enemy);
+    var enemy_Right = rightSide(enemy);
+    var enemy_Up = upSide(enemy);
+    var enemy_Down = downSide(enemy);
+    var playerDead = false;
+    var enemyDead = false;    
   
   if(player_Down<=enemy_Up) {
     enemyDead = true;
@@ -166,15 +169,20 @@ function StepOnEnemy(player, enemy){
     enemy.remove();
   }
 
-  if(player_Right>=enemy_Right){
+  if(player_Right<=enemy_Right && player_Down>enemy_Up){
     playerDead = true;
   } 
   if(playerDead){
     player.remove();
   }
 
-  console.log("Sebastian's Right: " + player_Right);
-  console.log("Koppa's Right: " + enemy_Right);
+    console.log("Sebastian's Right: " + player_Right);
+    console.log("Sebastian's Down: " + player_Down);
+    console.log("Koppa's Right: " + enemy_Right);
+}
+
+function die(){
+    
 }
 
 
