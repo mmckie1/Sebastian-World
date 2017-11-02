@@ -173,7 +173,7 @@ function StepOnEnemy(player, enemy){
     player.remove();
   }
 
-  console.log("Sebastian's left: " + player_Left);
+  console.log("Sebastian's Right: " + player_Right);
   console.log("Koppa's Right: " + enemy_Right);
 }
 
