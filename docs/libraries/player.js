@@ -129,7 +129,7 @@ function FinishLine(tempfin) {
     }
   
     
-  }ß
+  }
   
 }
 
