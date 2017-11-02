@@ -133,7 +133,7 @@ function FinishLine(tempfin) {
   
 }
 
- {
+ function Score(tempX){
   fill("#ffffff").strokeWeight(2).textSize(10);
   stroke(0);
   textFont("Georgia");
