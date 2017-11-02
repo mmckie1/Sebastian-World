@@ -129,7 +129,7 @@ function FinishLine(tempfin) {
     }
   
     
-  }
+  }ß
   
 }
 
@@ -163,12 +163,15 @@ function StepOnEnemy(player, enemy){
     enemyDead = true;
   }
   if(enemyDead){
-    //enemy.remove();
+    enemy.remove();
   }
 
-  if(player_Left<=enemy_Right){
-    player.remove();
+  if(player_Left>=enemy_Right){
+    playerDead = true;
   } 
+  if(playerDead){
+    player.remove();
+  }
 
   console.log("Sebastian's left: " + player_Left);
   console.log("Koppa's Right: " + enemy_Right);
