@@ -163,7 +163,7 @@ function StepOnEnemy(player, enemy){
     enemyDead = true;
   }
   if(enemyDead){
-    enemy.remove();
+    //enemy.remove();
   }
 
   if(player_Left<=enemy_Right){
