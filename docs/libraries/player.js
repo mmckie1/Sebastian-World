@@ -165,6 +165,11 @@ function StepOnEnemy(player, enemy){
   if(enemyDead){
     enemy.remove();
   }
+
+  if(player_Left<=enemy_Right){
+    player.remove();
+  } 
+
   console.log("Sebastian's Bottom: " + player_Down);
   console.log("Koppa's Top: " + enemy_Up);
 }
