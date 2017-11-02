@@ -133,7 +133,7 @@ function FinishLine(tempfin) {
   
 }
 
-function Score(tempX) {
+ {
   fill("#ffffff").strokeWeight(2).textSize(10);
   stroke(0);
   textFont("Georgia");
@@ -170,8 +170,8 @@ function StepOnEnemy(player, enemy){
     player.remove();
   } 
 
-  console.log("Sebastian's Bottom: " + player_Down);
-  console.log("Koppa's Top: " + enemy_Up);
+  console.log("Sebastian's left: " + player_Left);
+  console.log("Koppa's Right: " + enemy_Right);
 }
 
 
