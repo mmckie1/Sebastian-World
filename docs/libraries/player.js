@@ -4,6 +4,7 @@ var GROUND_Y = 350;
 var SCENE_W = 1024;
 var SCENE_H = 400;
 var score = 0;
+var gamePlay;
 
 function Sebastian(tempSprite) {
   this.sprite = tempSprite;
@@ -128,7 +129,6 @@ function FinishLine(tempfin) {
       this.fin.position.y = 345;
       this.fin.velocity.y = -1;
     }
-  
     
   }
   
@@ -166,7 +166,9 @@ function StepOnEnemy(player, enemy){
     enemyDead = true;
   }
   if(enemyDead){
-    enemy.remove();
+    enemy.changeAnimation("squish");
+    enemy.position.y=350;
+    score=score+2;
   }
 
   if(player_Right<=enemy_Right && player_Down>enemy_Up){
@@ -176,12 +178,15 @@ function StepOnEnemy(player, enemy){
     player.remove();
   }
 
+    die();
     console.log("Sebastian's Right: " + player_Right);
     console.log("Sebastian's Down: " + player_Down);
     console.log("Koppa's Right: " + enemy_Right);
 }
 
 function die(){
+    gamePlay = frameRate();
+    console.log("Die Time: "+gamePlay);
     
 }
 
