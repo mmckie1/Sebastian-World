@@ -1,9 +1,15 @@
 # Super Sebastian World
 ### About
-Super Sebastian World is a web based 2D platform game based off of the iconic Super Mario Bros. game developed and published by Nintendo. This game was developed using the p5.js, p5.playjs and scenemanger.js libraries. 
-In Super Sebastian World, the player takes on the role of Sebastian the Ibis, the University of Miami offical mascot, as tries to obtain a Bachelors of Science in Mascoting.
+Super Sebastian World is a web-based 2D platform game based off of the iconic Super Mario Bros. game developed and published by Nintendo. This game was developed using the p5.js, p5.playjs, and scenemanger.js libraries. 
+In Super Sebastian World, the player takes on the role of Sebastian the Ibis, the University of Miami official mascot, as tries to obtain a Bachelors of Science in Mascoting.
 <!--- blank line -->
-### Screenshots
-![](https://raw.githubusercontent.com/mmckie1/Sebastian-World/master/docs/assets/Screen%20Shot%202019-06-18%20at%2012.17.59%20PM.png)
+### Tutorials
+I walk through the process of making this game in my youtube series #ucodeit. 
+#### Part 1 
+In PART I, I show you how to set up your p5 playground for development.
+#### Part 2 
+In PART II I show you how to set up the scenemanger that will enable the game to move through different scenes seamlessly. 
+#### Part 3 
+In PART III I show you how to render Super Mario's iconic bright blue sky, rolling mountain tops, and title face to create the intro screen. 
 <!--- blank line -->
 Live Demo [here](https://mmckie1.github.io/Sebastian-World/)
