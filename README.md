@@ -1,7 +1,7 @@
 # Super Sebastian World
 ### About
 Super Sebastian World is a web-based 2D platform game based off of the iconic Super Mario Bros. game developed and published by Nintendo. This game was developed using the p5.js, p5.playjs, and scenemanger.js libraries. 
-In Super Sebastian World, the player takes on the role of Sebastian the Ibis, the University of Miami official mascot, as tries to obtain a Bachelors of Science in Mascoting.
+In Super Sebastian World, the player takes on the role of Sebastian the Ibis, the University of Miami official mascot, as he tries to obtain a Bachelors of Science in Mascoting.
 <!--- blank line -->
 ### Tutorials
 I walk through the process of making this game in my youtube series [#ucodeit](https://www.youtube.com/playlist?list=PLcAdnzko5SMj5f2GcgLaxBFRQIF3pqP5v). 
